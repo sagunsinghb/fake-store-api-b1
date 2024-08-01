@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 @RequiredArgsConstructor
 public class BoostrapData implements CommandLineRunner {
@@ -29,5 +31,7 @@ public class BoostrapData implements CommandLineRunner {
         bookRepository.findAll()
                 .forEach(System.out::println);
 
+        Optional<Book> savedBook = bookRepository.findById(1L);
+        savedBook.ifPresent(System.out::println);
     }
 }
