@@ -21,12 +21,12 @@ public class Book {
 
     private String title;
     private String isbn;
-    private String author;
+    private String authorName;
 
-    public Book(String title, String isbn, String author) {
+    public Book(String title, String isbn, String authorName) {
         this.title = title;
         this.isbn = isbn;
-        this.author = author;
+        this.authorName = authorName;
     }
 
     @Override

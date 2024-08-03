@@ -44,7 +44,7 @@ public class BookServiceJpaImpl implements BookService {
             Book bookToUpdate = savedBook.get();
             if (StringUtils.hasText(book.getTitle())) bookToUpdate.setTitle(book.getTitle());
             if (StringUtils.hasText(book.getIsbn())) bookToUpdate.setIsbn(book.getIsbn());
-            if (StringUtils.hasText(book.getAuthor())) bookToUpdate.setAuthor(book.getAuthor());
+            if (StringUtils.hasText(book.getAuthorName())) bookToUpdate.setAuthorName(book.getAuthorName());
             return this.bookRepository.save(bookToUpdate);
         }
 
